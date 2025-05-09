@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1711382097 source:c:\my projects\c projects\tp\main.c
+	<stdio.h>
+	<stdlib.h>
+	"types.h"
+	"library.c"
+
+1711382423 c:\my projects\c projects\tp\types.h
+
+1711405325 c:\my projects\c projects\tp\library.c
+	"types.h"
+	<stdio.h>
+	<stdlib.h>
+

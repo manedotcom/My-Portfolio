@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1735902716 source:c:\my projects\c projects\tp2final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<time.h>
+	<windows.h>
+	"headers.h"
+
+1735892387 c:\my projects\c projects\tp2final\headers.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<time.h>
+	<windows.h>
+

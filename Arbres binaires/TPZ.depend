@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1715424800 source:c:\my projects\c projects\tpz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Operation_Arbres.h"
+	"Operation_Stacks.h"
+
+1715422814 c:\my projects\c projects\tpz\operation_arbres.h
+	<stdio.h>
+	<stdlib.h>
+
+1715423942 c:\my projects\c projects\tpz\operation_stacks.h
+
