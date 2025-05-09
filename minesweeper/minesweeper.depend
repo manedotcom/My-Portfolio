@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1739308957 source:c:\my projects\c projects\minesweeper\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<stdbool.h>
+	<windows.h>
+
