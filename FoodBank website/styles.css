@@ -1,0 +1,145 @@
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+    background-color: #FBF1B9;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a div.titles {
+    background-color: floralwhite;
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
+    line-height: 85px;
+}
+
+header a div.titles p {
+    font-family: 'Jost', sans-serif;
+    padding-left: 70px;
+    opacity: 0.7;
+    color: black;
+    transform: translateY(-20px);
+}
+
+header a div.titles h1 {
+    padding-up: 40px;
+    color: black;
+}
+
+header h1, header p {transform: translateY(20px);}
+.titles hr {opacity: 0.5;}
+
+/* slider */
+
+div.slides {
+    display: flex;
+    flex-direction: row;
+    animation: glisse 15s infinite ease;
+}
+
+img {
+    width: 300px;
+    padding: 20px;
+}
+
+@keyframes glisse {
+    0% {transform: translateX(0);}
+    10% {transform: translateX(0);}
+    33% {transform: translateX(-500px);}
+    66% {transform: translateX(-500px);}
+    100% {transform: translateX(0);}
+}
+
+/* nav menu */
+
+nav.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul a li {
+    list-style-type: none;
+    display: flex;
+    display: inline-block;
+    width: 24%;
+    height: 180px;
+    flex: 1;
+    align-items: center;
+    transition: 0.4s all;
+}
+
+nav ul a li:hover {
+    transform: scale(1.1);
+    transition: 0.4s all;
+}
+
+.pizza {
+    background: url(images/pizza-banner.jpg) no-repeat;
+    background-size: cover;
+}
+.salade {
+    background: url(images/salad-banner.jpg);
+    background-size: cover;
+}
+.burger {
+    background: url(images/burger-banner.jpg);
+    background-size: cover;
+}
+.drink {
+    background: url(images/boisson-banner.jpg);
+    background-size: cover;
+}
+
+nav ul a li {
+    color: floralwhite;
+    text-decoration: none;
+    font-size: 75px;
+    padding-top: 50px;
+}
+
+/* sections */
+
+section h2 {
+    padding-left: 30px;
+    font-size: 50px;
+    color: #fff;
+}
+
+/* plats (items) */
+.item {
+    background-color: floralwhite;
+    display: flex;
+    margin: 50px;
+    width: 80%;
+}
+
+.item .bio {
+    line-height: 47px;
+}
+
+.item .bio h3, p {
+    font-family: 'Lobster', cursive;
+}
+
+section img {
+    width: 350px;
+}
+
+.bio h3 {font-size: 30px;}
+.bio p {font-size: 20px;}
