@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="transport.control.FareMediaController"
+      spacing="20" style="-fx-padding: 25;">
+
+    <Label text="Fare Media Issuance" style="-fx-font-size: 22px; -fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="15" vgap="15" style="-fx-background-color: white; -fx-padding: 20; -fx-border-radius: 5; -fx-border-color: #ddd;">
+        <columnConstraints>
+            <ColumnConstraints prefWidth="150" halignment="RIGHT"/>
+            <ColumnConstraints prefWidth="250"/>
+        </columnConstraints>
+
+        <!-- Row 0
+        <Label text="Fare Medium ID:" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="fareIdField" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/> -->
+
+        <!-- Row 1 -->
+        <Label text="User:" style="-fx-font-weight: bold;" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="userComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/>
+
+        <!-- Row 2 -->
+        <Label text="Fare Type:" style="-fx-font-weight: bold;" GridPane.rowIndex="2"/>
+        <HBox spacing="15" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <RadioButton fx:id="ticketRadioButton" text="Ticket" style="-fx-font-weight: bold;">
+                <toggleGroup>
+                    <ToggleGroup fx:id="fareTypeGroup"/>
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="cardRadioButton" text="Navigation Card" toggleGroup="$fareTypeGroup" style="-fx-font-weight: bold;"/>
+        </HBox>
+
+        <!-- Row 3 -->
+        <Label text="Payment Method:" style="-fx-font-weight: bold;" GridPane.rowIndex="3"/>
+        <ComboBox fx:id="paymentMethodComboBox" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/>
+
+        <!-- Row 4 -->
+        <Label text="" GridPane.rowIndex="4"/>
+        <HBox spacing="15" GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER_RIGHT">
+            <Label fx:id="priceLabel" text="Price: 0.0 DA" style="-fx-font-weight: bold;"/>
+            <Button text="Calculate" onAction="#calculatePrice"
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </GridPane>
+
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button text="Issue Fare" onAction="#issueFareMedium"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 120; -fx-pref-height: 35;"/>
+    </HBox>
+
+    <VBox spacing="10" style="-fx-padding: 10;">
+        <Label text="Recent Fare Media" style="-fx-font-size: 16px; -fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+        <ListView fx:id="fareMediaListView" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-pref-height: 200;" VBox.vgrow="ALWAYS"/>
+    </VBox>
+</VBox>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="transport.control.ComplaintController"
+      spacing="20" style="-fx-padding: 25;">
+
+    <Label text="Complaint Submission" style="-fx-font-size: 22px; -fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="15" vgap="15" style="-fx-background-color: white; -fx-padding: 20; -fx-border-radius: 5; -fx-border-color: #ddd;">
+        <columnConstraints>
+            <ColumnConstraints prefWidth="150" halignment="RIGHT"/>
+            <ColumnConstraints prefWidth="300"/>
+        </columnConstraints>
+
+        <!-- Row 0
+        <Label text="Complaint ID:" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="complaintIdField" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/>-->
+
+        <!-- Row 1 -->
+        <Label text="Reporter:" style="-fx-font-weight: bold;" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="reporterComboBox" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/>
+
+        <!-- Row 2 -->
+        <Label text="Complaint Type:" style="-fx-font-weight: bold;" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="complaintTypeComboBox" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/>
+
+        <!-- Row 3 -->
+        <Label text="Concerned Entity:" style="-fx-font-weight: bold;" GridPane.rowIndex="3"/>
+        <TextField fx:id="entityField" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-pref-height: 30;"/>
+
+        <!-- Row 4 -->
+        <Label text="Description:" style="-fx-font-weight: bold;" GridPane.rowIndex="4"/>
+        <TextArea fx:id="descriptionArea" GridPane.rowIndex="4" GridPane.columnIndex="1"
+                  style="-fx-pref-height: 100; -fx-font-size: 14px;"/>
+    </GridPane>
+
+    <HBox spacing="15" alignment="CENTER_RIGHT">
+        <Button text="Submit Complaint" onAction="#registerComplaint"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-pref-width: 150; -fx-pref-height: 35;"/>
+    </HBox>
+
+    <VBox spacing="10" style="-fx-padding: 10;">
+        <Label text="Active Complaints" style="-fx-font-size: 16px; -fx-text-fill: #34495e; -fx-font-weight: bold;"/>
+        <ListView fx:id="complaintsListView" style="-fx-border-color: #ddd; -fx-border-radius: 5; -fx-pref-height: 200;" VBox.vgrow="ALWAYS"/>
+        <Label fx:id="suspensionLabel" style="-fx-text-fill: #e74c3c; -fx-font-weight: bold;"/>
+    </VBox>
+</VBox>
